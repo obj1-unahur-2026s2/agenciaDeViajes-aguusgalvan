@@ -64,36 +64,36 @@ class PacksProvinciales inherits PackNacionales {
   
 }
 
-class Cordinador {
-    const rol
-    var viajesRealizados
-    var motivado
-    var añosDeExperiencia
+class Coordinador {
+  const añosExperiencia
+  const motivado
+  const cantViajes
+  var rol
 
-method viajesREalizaados() = viajesRealizados
-method motivado() = motivado
-method añosDeExperiencia () = añosDeExperiencia
-
-method estaAltamenteCalificado () =
-viajesRealizados  > 20 && (
-    (
-        rol == "guia" && motivado ) ||
-        (rol == "asistenteLogico" && 
-        añosDeExperiencia >=3) ||
-        rol == "acompañante"
-    )
-
-    method rol() = rol 
-   // method cambiarRol (nuevoRol) {
-     
-  //  }
- 
-        //method añosDeExperiencia () 
-        method guia() = "guia"
-        method asistenteLogistico() = "asistenteLogico"
-        method acompañante () = "acompañanate" 
-
-
+  method añosDeExperiencia() = añosExperiencia
+  method estaMotivado() = motivado
+  method cantViajesRealizados() = cantViajes
+  method rolActual() = rol
+  method cambiarRol(unRol) {
+    if (unRol == "guia")
+    rol = unRol
+    else if (unRol == "asistenteLogistico")
+    rol = unRol
+    else if (unRol == "acompañante")
+    rol = unRol
+    else 
+    self.error("este rol no existe")
+  }
+  method esAltamenteCalificado() {
+    return self.cantViajesRealizados() > 
+    20 && self.cumpleRol()
+  }
+  method cumpleRol() {
+    return if (rol == "guia") self.estaMotivado() 
+        else if (rol == "asistenteLogistico")
+         self.añosDeExperiencia() >= 3
+        else true
+  }
 }
 
 class Beneficios {
