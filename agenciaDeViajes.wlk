@@ -65,8 +65,34 @@ class PacksProvinciales inherits PackNacionales {
 }
 
 class Cordinador {
+    const rol
+    var viajesRealizados
+    var motivado
+    var añosDeExperiencia
+
+method viajesREalizaados() = viajesRealizados
+method motivado() = motivado
+method añosDeExperiencia () = añosDeExperiencia
+
+method estaAltamenteCalificado () =
+viajesRealizados  > 20 && (
+    (
+        rol == "guia" && motivado ) ||
+        (rol == "asistenteLogico" && 
+        añosDeExperiencia >=3) ||
+        rol == "acompañante"
+    )
+
+    method rol() = rol 
+   // method cambiarRol (nuevoRol) {
+     
+  //  }
  
- method añosDeExperiencia () 
+        //method añosDeExperiencia () 
+        method guia() = "guia"
+        method asistenteLogistico() = "asistenteLogico"
+        method acompañante () = "acompañanate" 
+
 
 }
 
