@@ -1,8 +1,9 @@
 class pack {
-    var duracion 
-    var precioBase
-    var beneficios = []
-    var coordinador
+
+    const duracion 
+    const precioBase
+    const beneficios = []
+    const coordinador
 
     method duracion() = duracion
     method precioBase() = precioBase
@@ -28,8 +29,8 @@ class pack {
 
 class PackNacionales inherits pack {
 
-    var provincia
-    var actividades = []
+    const provincia
+    const actividades = []
 
     method provincia () = provincia
     method actividades () = actividades
@@ -41,16 +42,46 @@ class PackNacionales inherits pack {
 
 class PackInternacional inherits pack {
 
-var pais 
-var escala
-var lugarDeInteres
+const pais
+const escala 
+const lugarDeInteres
+
+method pais() = pais
+
+method escala() = escala
+
+method lugarDeInteres () = lugarDeInteres
+
+  override method esPremium () = lugarDeInteres && self.duracion() 
+    > 20 && escala == 0
+
+     // override method precioAntesDePremium() = 
 
 }
 
 class PacksProvinciales inherits PackNacionales {
 
+  
 }
 
+class Cordinador {
+ 
+ method añosDeExperiencia () 
+
+}
+
+class Beneficios {
+    const tipo 
+    const costo 
+    const vigente 
+
+    method tipo() = tipo
+    method costo () = costo
+    method vigente () = vigente
+
+    method estaVigente() = vigente
+
+}
 
 
 
