@@ -3,7 +3,7 @@
 La agencia de turismo **“Viajes sin Fronteras”** busca modernizar su sistema de gestión de packs de viajes. Con destinos en todo el mundo y una clientela muy variada, quieren desarrollar un sistema que les permita organizar, personalizar y mejorar sus servicios.
 
 Por el momento, ofrecen dos tipos de packs: **nacionales** e **internacionales**. No se debe permitir crear un pack si no es de alguno de estos dos tipos.
-De cada pack nos interesa saber la duración en días, precio base, todos sus beneficios especiales y su coordinador a cargo.
+De cada pack nos interesa saber la duración en días, precio base, todos sus beneficios especiales y su clacoordinador a cargo.
 
 #### Packs Nacionales
 
